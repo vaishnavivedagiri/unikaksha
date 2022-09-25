@@ -1,0 +1,59 @@
+#binary equivalent of a number using recursion
+def convert(x):
+    if x>0:
+        convert(x//2)
+        print(x%2,end='')
+        
+a=int(input())
+convert(a)
+
+#fibonacci series
+def fibo(x):
+    a=0
+    b=1
+    print(a,b,end=' ')
+    for i in range(0,x):
+        c=a+b
+        a=b
+        b=c
+        print(c,end=' ')
+x=int(input())
+fibo(x)
+
+#odd or even
+n=int(input())
+if(n%2==0):
+    print('even!')
+else:
+    print('odd!')
+    
+#factorial
+def fact(x):
+    a=1
+    for i in range(1,x+1):
+        a=a*i
+    print(a)
+b=int(input())
+fact(b)
+
+#LCM of two numbers
+def lcm(a,b):
+    x,y=a,b
+    if(a<b):
+        a,b=b,a
+        for i in range(a,(a*b)+1,a):
+            if(i%b==0):
+                print(i)
+                
+a=int(input())
+b=int(input())
+lcm(a,b)
+
+#decimal to binary
+def convert(x):
+    if x>0:
+        convert(x//2)
+        print(x%2,end='')
+a=int(input())
+convert(a)
+
